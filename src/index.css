@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+pre {
+  font-size: 14px;
+}
+
+
+.app {
+  margin: 0 auto;
+  display: grid;
+  max-width: 960px;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "sidebar mainContent"
+;
+  gap: 16px;
+
+}
+
+#mainHeading {
+  grid-area: heading;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  position: sticky;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  justify-self: right;
+  display: grid;
+}
+
+#mainContent {
+  grid-area: mainContent;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.sqlQuery {
+  cursor: pointer;
+}
+
+a {
+  color: hsl(279, 20%, 20%);
+  text-decoration: none;
+}
